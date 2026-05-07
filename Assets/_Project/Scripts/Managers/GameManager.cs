@@ -1,5 +1,7 @@
+using RankHub;
 using System.Collections;
 using UnityEngine;
+using static UnityEngine.LowLevelPhysics2D.PhysicsLayers;
 
 public class GameManager : MonoBehaviour
 {
@@ -58,11 +60,12 @@ public class GameManager : MonoBehaviour
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
 
-        FeedbackManager.Instance.OnFeedbackComplete += HandleFeedbackComplete;
     }
 
     private void Start()
     {
+        FeedbackManager.Instance.OnFeedbackComplete += HandleFeedbackComplete;
+
         ShowBriefing();
     }
 
@@ -136,6 +139,8 @@ public class GameManager : MonoBehaviour
         AudioManager.Instance?.PlaySFX(dayEndSFX);
 
         totalScore += score;
+        PlayerPrefs.SetInt("TotalScore", totalScore);
+        PlayerPrefs.Save();
         totalFunKillersCaught += funKillersCaught;
 
         userConsole.Hide();
@@ -211,12 +216,14 @@ public class GameManager : MonoBehaviour
         if (timeTaken >= maxTimePerGuest)
         {
             mistakes++;
+            isFeedbackPlaying = true;
             FeedbackManager.Instance?.PlayWrong(playerApproved);
             AudioManager.Instance?.PlaySFX(wrongDecisionSFX);
             return;
         }
 
         bool correct = playerApproved == shouldEnter;
+        isFeedbackPlaying = true;
 
         if (correct)
         {
@@ -239,7 +246,6 @@ public class GameManager : MonoBehaviour
             funKillersCaught++;
 
         FeedbackManager.Instance?.PlayCorrect(playerApproved);
-        isFeedbackPlaying = true;
         AudioManager.Instance?.PlaySFX(correctDecisionSFX);
 
         AddFun(funIncreasePerCorrectApproval);

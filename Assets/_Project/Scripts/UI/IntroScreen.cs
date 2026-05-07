@@ -24,12 +24,18 @@ public class IntroScreen : MonoBehaviour
     private string[] storyLines;
     private bool isTyping = false;
     private bool skipRequested = false;
-
+    private string currentLine = "";
+    private int currentCharIndex;
     private void Start()
     {
         storyCanvas.SetActive(false);
         submitButton.onClick.AddListener(OnSubmitName);
-        skipButton.onClick.AddListener(OnSkip);
+        skipButton.onClick.AddListener(CompleteLine);
+    }
+
+    private void OnDestroy()
+    {
+        skipButton.onClick.RemoveListener(CompleteLine);
     }
 
     private void OnSubmitName()
@@ -91,26 +97,35 @@ public class IntroScreen : MonoBehaviour
             yield return new WaitForSeconds(0.6f);
         }
 
-        LevelLoader.LoadLevel(3);
+        LoadNextLevel();
     }
 
     private IEnumerator TypeLine(string line)
     {
-        foreach (char c in line)
+        currentLine = line;
+        currentCharIndex = 0;
+
+        while (currentCharIndex < currentLine.Length)
         {
             if (skipRequested)
             {
-                storyText.text += line;
+                // Complete remaining text instantly
+                storyText.text += currentLine.Substring(currentCharIndex);
+
+                skipRequested = false;
                 yield break;
             }
 
+            char c = currentLine[currentCharIndex];
+
             storyText.text += c;
 
-            // Only play sound if character is NOT a space
             if (c != ' ' && c != '\n' && c != '\t')
             {
                 AudioManager.Instance?.PlaySFX(typeSound);
             }
+
+            currentCharIndex++;
 
             yield return new WaitForSeconds(typeSpeed);
         }
@@ -118,24 +133,17 @@ public class IntroScreen : MonoBehaviour
         storyText.text += "\n";
     }
 
-    private void OnSkip()
+    private void CompleteLine()
     {
         if (isTyping)
         {
-            // first skip press: finish current line instantly
-            skipRequested = true;
-            StartCoroutine(ResetSkipAfterFrame());
-        }
-        else
-        {
-            // second skip press while not typing: jump to end
             skipRequested = true;
         }
     }
 
-    private IEnumerator ResetSkipAfterFrame()
+    public void LoadNextLevel()
     {
-        yield return new WaitForSeconds(0.1f);
-        skipRequested = false; // reset so next line types normally
+        LevelLoader.LoadLevel(3);
     }
+
 }
