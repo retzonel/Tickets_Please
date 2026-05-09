@@ -14,7 +14,7 @@ public class AudioManager : MonoBehaviour
     {
         if (Instance != null)
         {
-            Debug.Log("More than one instance of Auido Manager found!");
+            //Debug.Log("More than one instance of Auido Manager found!");
             Destroy(gameObject);
             return;
         }

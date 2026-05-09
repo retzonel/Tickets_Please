@@ -21,6 +21,8 @@ public class FeedbackManager : MonoBehaviour
 
     [Header("VFX")] [SerializeField, Self] CinemachineImpulseSource shakeSource;
 
+    public System.Action OnFeedbackComplete;
+
     private void Awake()
     {
         if (Instance == null) Instance = this;
@@ -41,11 +43,11 @@ public class FeedbackManager : MonoBehaviour
         DoFlash(new Color(0f, 1f, 0f, 0.25f)); // green
     }
 
-    public void PlayWrong(bool wasApproved)
+    public void PlayWrong(bool wasApproved, bool timeout = false)
     {
         stampImage.sprite = wasApproved ? approvedStamp : deniedStamp;
         AudioManager.Instance?.PlaySFX(wrongSound, 0.35f);
-        DoStampAnimation();
+        if(!timeout)    DoStampAnimation();
         DoFlash(new Color(1f, 0f, 0f, 0.35f)); // red
     }
 
@@ -60,7 +62,12 @@ public class FeedbackManager : MonoBehaviour
         seq.Join(stampImage.DOFade(1f, 0.1f));
         seq.AppendInterval(0.6f);
         seq.Append(stampImage.DOFade(0f, 0.2f));
-        seq.OnComplete(() => stampImage.gameObject.SetActive(false));
+        seq.OnComplete(() =>
+        { 
+            stampImage.gameObject.SetActive(false);
+            OnFeedbackComplete?.Invoke();
+        });
+
         shakeSource.GenerateImpulse();
     }
 

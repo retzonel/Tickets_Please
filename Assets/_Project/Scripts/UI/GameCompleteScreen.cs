@@ -11,9 +11,11 @@ public class GameCompleteScreen : MonoBehaviour
     [SerializeField] private CanvasGroup contentGroup;
     [SerializeField] private UnityEngine.UI.Button mainMenuBtn;
 
+    private string playerName;
+
     private void Start()
     {
-        string playerName = PlayerPrefs.GetString("PlayerName", "");
+        playerName = PlayerPrefs.GetString("PlayerName", "Player");
         int totalScore = PlayerPrefs.GetInt("TotalScore", 0);
         int funKillersCaught = PlayerPrefs.GetInt("FunKillersCaught", 0);
 
@@ -36,4 +38,5 @@ public class GameCompleteScreen : MonoBehaviour
         if (score >= 1000) return "rank: NEEDS IMPROVEMENT 😬";
         return "rank: THE FUN KILLERS WON 💀";
     }
+
 }
