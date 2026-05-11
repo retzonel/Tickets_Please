@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GuestProfile
   personalInfo:
     name: Tommy Williams
-    age: 12
+    age: 18
     portrait: {fileID: 2062635320437878736, guid: 42d19552624ff894bbe7ada5525c06a9, type: 3}
     reasonForVisit: Birthday celebration with family
   scanResult:

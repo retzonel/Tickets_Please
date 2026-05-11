@@ -16,7 +16,7 @@ MonoBehaviour:
     name: Dr. Emily Foster
     age: 55
     portrait: {fileID: -3316179237714911493, guid: cf30e98ac9b911e45ae88abb0856acbe, type: 3}
-    reasonForVisit: Research on guest behavior
+    reasonForVisit: This park needs stricter anti-fun policies
   scanResult:
     sick: 0
     lowCortisol: 0

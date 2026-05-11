@@ -16,7 +16,7 @@ MonoBehaviour:
     name: Amanda White
     age: 24
     portrait: {fileID: -3498950037377471100, guid: 72f9c8c06601a4a43aa027bb33fe99d5, type: 3}
-    reasonForVisit: Bachelorette party
+    reasonForVisit: Bachelorette party time!!!
   scanResult:
     sick: 0
     lowCortisol: 1

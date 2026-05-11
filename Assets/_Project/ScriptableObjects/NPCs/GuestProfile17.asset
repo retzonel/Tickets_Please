@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GuestProfile
   personalInfo:
     name: Rachel
-    age: 26
+    age: 49
     portrait: {fileID: 2876219381275409499, guid: 4d569f535cbd9c84b8bf5dc715a8ba77, type: 3}
-    reasonForVisit: Vlogger documenting the park
+    reasonForVisit: This park has violated international boredom standards
   scanResult:
     sick: 1
     lowCortisol: 0

@@ -16,7 +16,7 @@ MonoBehaviour:
     name: Principal Harris
     age: 55
     portrait: {fileID: -3778333505869009090, guid: 2864df22cde94fa4b86196fbb9ff0040, type: 3}
-    reasonForVisit: School field trip supervision
+    reasonForVisit: "I\u2019m here to file complaints about cheering"
   scanResult:
     sick: 1
     lowCortisol: 0

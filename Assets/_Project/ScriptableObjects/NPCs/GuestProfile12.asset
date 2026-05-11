@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GuestProfile
   personalInfo:
     name: Lisa Park
-    age: 31
+    age: 24
     portrait: {fileID: 9111191409969159765, guid: 1e283dc8c1c90af43b3336c586ec5fb3, type: 3}
-    reasonForVisit: Girls' weekend getaway
+    reasonForVisit: The music here is far too upbeat
   scanResult:
     sick: 0
-    lowCortisol: 0
-    highDopamine: 0
+    lowCortisol: 1
+    highDopamine: 1
   isFunKiller: 1
   hasValidTicket: 0

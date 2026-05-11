@@ -16,7 +16,7 @@ MonoBehaviour:
     name: Zoe
     age: 20
     portrait: {fileID: -3593991872155376290, guid: 9977955cce14aa441b4fedfb4af8eecb, type: 3}
-    reasonForVisit: To destroy haha haha
+    reasonForVisit: The mascot looks suspiciously joyful
   scanResult:
     sick: 1
     lowCortisol: 0

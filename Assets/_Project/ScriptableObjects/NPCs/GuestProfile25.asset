@@ -16,7 +16,7 @@ MonoBehaviour:
     name: Kim
     age: 20
     portrait: {fileID: -4852094582147000638, guid: 887308042dd533d40a9d87db5f7d96a2, type: 3}
-    reasonForVisit: Came to meet family
+    reasonForVisit: I came to meet school friends
   scanResult:
     sick: 0
     lowCortisol: 1

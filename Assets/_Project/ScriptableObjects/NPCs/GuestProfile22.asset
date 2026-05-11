@@ -16,10 +16,10 @@ MonoBehaviour:
     name: Riri
     age: 20
     portrait: {fileID: -258720767569812337, guid: 79215082db7d2c542a6094b1cc59de6b, type: 3}
-    reasonForVisit: To destroy haha haha
+    reasonForVisit: I believe cotton candy causes happiness addiction
   scanResult:
     sick: 1
     lowCortisol: 1
-    highDopamine: 0
+    highDopamine: 1
   isFunKiller: 1
   hasValidTicket: 0

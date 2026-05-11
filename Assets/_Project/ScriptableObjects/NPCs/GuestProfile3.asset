@@ -16,10 +16,10 @@ MonoBehaviour:
     name: Peniah
     age: 19
     portrait: {fileID: 2197062046295774595, guid: e6b1bae1eeeeb694786f679d48021288, type: 3}
-    reasonForVisit: Check the place out
+    reasonForVisit: I came to report unauthorized smiling
   scanResult:
-    sick: 1
-    lowCortisol: 0
-    highDopamine: 0
+    sick: 0
+    lowCortisol: 1
+    highDopamine: 1
   isFunKiller: 1
   hasValidTicket: 1

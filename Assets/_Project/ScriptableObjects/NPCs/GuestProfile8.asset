@@ -16,7 +16,7 @@ MonoBehaviour:
     name: Sarah J
     age: 34
     portrait: {fileID: 794838186090432735, guid: 16860e919be91aa4d9b28d37f7a98565, type: 3}
-    reasonForVisit: Corporate team building event
+    reasonForVisit: "I\u2019m allergic to happiness"
   scanResult:
     sick: 1
     lowCortisol: 0

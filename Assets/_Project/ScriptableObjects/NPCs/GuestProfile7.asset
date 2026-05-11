@@ -16,7 +16,7 @@ MonoBehaviour:
     name: Jonny
     age: 8
     portrait: {fileID: -7549013094962190712, guid: 2bf28375bf1bb6347be61003701d9263, type: 3}
-    reasonForVisit: It's my birthday!!!
+    reasonForVisit: It's my birthday!
   scanResult:
     sick: 0
     lowCortisol: 1
