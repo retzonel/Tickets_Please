@@ -116,7 +116,7 @@ public class UserConsole : MonoBehaviour
     {
         var personalInfo = guestProfile.personalInfo;
         var text =
-            $"name: {personalInfo.name} \n \nage: {personalInfo.age} \n \nreason for coming: {personalInfo.reasonForVisit}";
+            $"Name: {personalInfo.name} \n \nAge: {personalInfo.age} \n \nReason For Coming: \n{personalInfo.reasonForVisit}";
         personalInfoText.text = text;
         portraitBg.enabled = true;
         portraitImage.enabled = true;

@@ -96,7 +96,6 @@ public class GameManager : MonoBehaviour
 
             AudioManager.Instance?.PlaySFX(timerEndSFX);
             HandleTimeout(playerApproved: false);
-
             StartCoroutine(AdvanceToNextGuest());
 
             return;
@@ -287,10 +286,9 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator AdvanceToNextGuest()
     {
-        userConsole.EnableConsoleButtons(false);
-
         yield return new WaitForSeconds(1f);
 
+        userConsole.EnableConsoleButtons(false);
         ShowNextGuest();
     }
 
