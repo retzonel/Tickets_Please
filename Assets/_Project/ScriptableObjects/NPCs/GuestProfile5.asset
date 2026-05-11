@@ -16,7 +16,7 @@ MonoBehaviour:
     name: Voldermort
     age: 55
     portrait: {fileID: -1331670664962139791, guid: 97e9f74a9a4431c4ab9df1c9f6be9fa4, type: 3}
-    reasonForVisit: To destroy haha haha
+    reasonForVisit: Children are having too much fun here
   scanResult:
     sick: 1
     lowCortisol: 1

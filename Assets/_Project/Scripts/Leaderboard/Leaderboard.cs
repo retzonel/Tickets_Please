@@ -264,13 +264,15 @@ public class Leaderboard : MonoBehaviour
         if (error.Contains("403") || error.Contains("Forbidden"))
         {
             if (debugMode) Debug.Log("Leaderboard full. Keep playing to beat the lowest score!");
+            SetStatus("Error: Leaderboard full", Color.red);
         }
         else
         {
             if (debugMode) Debug.Log($"Error: {error}");
+            SetStatus("Error loading", Color.red);
         }
 
-        SetStatus("Error loading", Color.red);
+        //SetStatus("Error loading", Color.red);
     }
 
     private void OnSubmitError(string error, string attemptedName)
@@ -280,13 +282,15 @@ public class Leaderboard : MonoBehaviour
         if (error.Contains("403") || error.Contains("Forbidden"))
         {
             if (debugMode) Debug.Log("Leaderboard full. Your score isn't high enough to enter the top.");
+            SetStatus("Error: Leaderboard full", Color.red);
         }
         else
         {
             if (debugMode) Debug.Log($"Error: {error}");
+            SetStatus("Error", Color.red);
         }
 
-        SetStatus("Error", Color.red);
+        //SetStatus("Error", Color.red);
     }
 
     private void SetStatus(string message, Color color)

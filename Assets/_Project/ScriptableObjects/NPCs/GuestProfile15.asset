@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GuestProfile
   personalInfo:
     name: Detective Miller
-    age: 41
+    age: 19
     portrait: {fileID: -2606918867217634888, guid: 3fdd06def38db49458801fa4c0fb0978, type: 3}
-    reasonForVisit: Investigating complaints
+    reasonForVisit: "I\u2019m here to inspect dangerous levels of excitement"
   scanResult:
     sick: 1
     lowCortisol: 1

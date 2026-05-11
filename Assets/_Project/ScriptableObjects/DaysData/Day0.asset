@@ -16,9 +16,9 @@ MonoBehaviour:
   guestQueue:
   - {fileID: 11400000, guid: 8dc9b9690431ed541b83af4f5b8e172e, type: 2}
   - {fileID: 11400000, guid: 2fb832094af742948b0d54d65b2a4bfb, type: 2}
-  - {fileID: 11400000, guid: c3a76af0e82408d43ab77f40c33f92a3, type: 2}
-  - {fileID: 11400000, guid: ab6cf63bab3c1b84684fd3d055040860, type: 2}
   - {fileID: 11400000, guid: a5f8892b3776e404d964755009140184, type: 2}
+  - {fileID: 11400000, guid: ab6cf63bab3c1b84684fd3d055040860, type: 2}
+  - {fileID: 11400000, guid: c3a76af0e82408d43ab77f40c33f92a3, type: 2}
   minAge: 5
   maxAge: 25
   maxMistakesAllowed: 2

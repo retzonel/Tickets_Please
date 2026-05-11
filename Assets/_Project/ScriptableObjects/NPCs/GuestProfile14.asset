@@ -16,7 +16,7 @@ MonoBehaviour:
     name: Amy
     age: 16
     portrait: {fileID: -4814845757396815184, guid: d97941fc831aedb42b13b703e4d46978, type: 3}
-    reasonForVisit: Hang out
+    reasonForVisit: I'm here to hangout with cool people
   scanResult:
     sick: 0
     lowCortisol: 1

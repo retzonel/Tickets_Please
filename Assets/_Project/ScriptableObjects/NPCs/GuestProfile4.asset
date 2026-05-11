@@ -16,7 +16,7 @@ MonoBehaviour:
     name: Chad
     age: 17
     portrait: {fileID: -2797763993773585283, guid: 2ec327472de4f8e4eba67f87a1a66e4d, type: 3}
-    reasonForVisit: To have fun
+    reasonForVisit: To do some cool stuffs
   scanResult:
     sick: 0
     lowCortisol: 1

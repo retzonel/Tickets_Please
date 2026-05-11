@@ -60,11 +60,12 @@ public class GameManager : MonoBehaviour
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
 
-        FeedbackManager.Instance.OnFeedbackComplete += HandleFeedbackComplete;
     }
 
     private void Start()
     {
+        FeedbackManager.Instance.OnFeedbackComplete += HandleFeedbackComplete;
+
         ShowBriefing();
     }
 

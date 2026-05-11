@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GuestProfile
   personalInfo:
     name: Joe
-    age: 36
+    age: 52
     portrait: {fileID: -341513997512385793, guid: 85bef36c671027444a8b626bccad19c5, type: 3}
     reasonForVisit: Just to chill bruh
   scanResult:
